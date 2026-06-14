@@ -53,7 +53,7 @@
 
 
     <!-- Hero Section -->
-    <section id="hero" class="centered">
+    <section id="hero">
         <div class="hero-content">
             <!-- Badge label -->
             <div class="hero-badge">ICCT College Capstone Project</div>
@@ -88,6 +88,52 @@
                     <span class="stat-number">100%</span>
                     <span class="stat-label">Solar Powered</span>
                 </div>
+            </div>
+        </div>
+
+        <!-- Hero visual mesh connection diagram (pure CSS) -->
+        <div class="hero-visual">
+            <div class="mesh-container">
+                <!-- Node 1 (Central Solar Hub) -->
+                <div class="node hub">
+                    <div class="node-pulse"></div>
+                    <svg viewBox="0 0 24 24" class="node-svg">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+                <!-- Node 2 (Phone) -->
+                <div class="node client-1">
+                    <div class="node-pulse"></div>
+                    <svg viewBox="0 0 24 24" class="node-svg">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <!-- Node 3 (Relay Node) -->
+                <div class="node client-2">
+                    <div class="node-pulse"></div>
+                    <svg viewBox="0 0 24 24" class="node-svg">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                </div>
+                <!-- Connecting Signal Lines -->
+                <svg class="mesh-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <line x1="18" y1="75" x2="50" y2="20" class="signal-line"></line>
+                    <line x1="50" y1="20" x2="82" y2="70" class="signal-line"></line>
+                    <line x1="18" y1="75" x2="82" y2="70" class="signal-line-dashed"></line>
+                </svg>
             </div>
         </div>
     </section>
