@@ -80,3 +80,56 @@ for (var i = 0; i < anchorLinks.length; i++) {
 document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
 }, false);
+
+/* --- Fetch Latest GitHub Release --- */
+function fetchLatestRelease() {
+  var repo = 'reikkikun-PH/BlueMesh';
+  var apiUrl = 'https://api.github.com/repos/' + repo + '/releases/latest';
+
+  fetch(apiUrl)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('GitHub API response was not OK');
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      var tagName = data.tag_name;
+      var downloadUrl = null;
+
+      // Try to find the asset ending with .apk
+      if (data.assets && data.assets.length > 0) {
+        for (var i = 0; i < data.assets.length; i++) {
+          var asset = data.assets[i];
+          if (asset.name.indexOf('.apk') !== -1) {
+            downloadUrl = asset.browser_download_url;
+            break;
+          }
+        }
+      }
+
+      // Fallback construction if APK asset is not explicitly found
+      if (!downloadUrl && tagName) {
+        downloadUrl = 'https://github.com/' + repo + '/releases/download/' + tagName + '/BlueMesh-' + tagName + '.apk';
+      }
+
+      // Update download card href
+      var downloadCard = document.getElementById('download-android');
+      if (downloadCard && downloadUrl) {
+        downloadCard.setAttribute('href', downloadUrl);
+      }
+
+      // Update download badge version tag
+      var downloadMeta = document.querySelector('#download-android .download-meta');
+      if (downloadMeta && tagName) {
+        downloadMeta.textContent = 'APK • ' + tagName;
+      }
+    })
+    .catch(function (error) {
+      console.warn('Could not fetch latest release from GitHub API:', error);
+      // Fallback values hardcoded in HTML will remain active
+    });
+}
+
+document.addEventListener('DOMContentLoaded', fetchLatestRelease);
+
