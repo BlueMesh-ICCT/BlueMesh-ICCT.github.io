@@ -296,7 +296,7 @@ section {
    ========================================================================== */
 
 #hero {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -305,7 +305,7 @@ section {
   padding: 130px 24px 70px;
   max-width: 900px;
   margin: 0 auto;
-  gap: 48px;
+  gap: 40px;
 }
 
 .hero-content {
@@ -389,26 +389,6 @@ section {
   font-weight: 600;
 }
 
-.hero-visual {
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-  margin-top: 12px;
-}
-
-.hero-image {
-  width: 100%;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.1);
-  transition: var(--transition);
-}
-
-.hero-image:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(59, 130, 246, 0.15);
-}
 
 /* ==========================================================================
    7. FEATURES SECTION
@@ -441,18 +421,6 @@ section {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(59, 130, 246, 0.1);
 }
 
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: rgba(59, 130, 246, 0.06);
-  border-radius: 12px;
-  border: 1px solid rgba(59, 130, 246, 0.12);
-}
 
 .feature-card h3 {
   font-size: 1.15rem;
@@ -756,9 +724,6 @@ section {
   box-shadow: 0 12px 35px rgba(59, 130, 246, 0.45);
 }
 
-.download-emoji {
-  font-size: 2.25rem;
-}
 
 .download-info {
   display: flex;
