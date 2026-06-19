@@ -138,32 +138,210 @@ function initAppGuide() {
 
   if (tabs.length === 0 || screens.length === 0) return;
 
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var targetScreenId = 'screen-' + tab.getAttribute('data-screen');
+  // --- Tab Switching ---
+  function switchToTab(screenName) {
+    var targetScreenId = 'screen-' + screenName;
+    tabs.forEach(function (t) { t.classList.remove('active'); });
+    screens.forEach(function (s) { s.classList.remove('active'); });
 
-      // Remove active class from all tabs
-      tabs.forEach(function (t) {
-        t.classList.remove('active');
-      });
-
-      // Remove active class from all screens
-      screens.forEach(function (s) {
-        s.classList.remove('active');
-      });
-
-      // Add active class to clicked tab and target screen
-      tab.classList.add('active');
-      var targetScreen = document.getElementById(targetScreenId);
-      if (targetScreen) {
-        targetScreen.classList.add('active');
+    // Find and activate the matching tab
+    tabs.forEach(function (t) {
+      if (t.getAttribute('data-screen') === screenName) {
+        t.classList.add('active');
       }
     });
+
+    var targetScreen = document.getElementById(targetScreenId);
+    if (targetScreen) {
+      targetScreen.classList.add('active');
+    }
+
+    // Trigger screen-specific effects
+    if (screenName === 'discovery') { triggerDiscoveryScan(); }
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      switchToTab(tab.getAttribute('data-screen'));
+    });
   });
+
+  // --- PIN Pad Logic ---
+  var pinEntry = [];
+  var pinDots = document.querySelectorAll('#pin-indicator .pin-dot');
+  var pinStatus = document.getElementById('pin-status');
+  var pinPad = document.querySelector('.pin-pad');
+  var pinLocked = false;
+
+  if (pinPad) {
+    var keys = pinPad.querySelectorAll('span');
+    keys.forEach(function (key) {
+      key.addEventListener('click', function () {
+        if (pinLocked) return;
+        var val = key.textContent;
+
+        // Press feedback
+        key.classList.add('pressed');
+        setTimeout(function () { key.classList.remove('pressed'); }, 150);
+
+        if (val === 'C') {
+          // Clear
+          pinEntry = [];
+          updatePinDots();
+          if (pinStatus) {
+            pinStatus.textContent = '';
+            pinStatus.className = 'pin-status';
+          }
+        } else if (val === '✓') {
+          if (pinEntry.length === 4) { handlePinSuccess(); }
+          else if (pinStatus) {
+            pinStatus.textContent = 'Enter 4 digits';
+            pinStatus.className = 'pin-status error';
+          }
+        } else {
+          if (pinEntry.length < 4) {
+            pinEntry.push(val);
+            updatePinDots();
+            if (pinEntry.length === 4) {
+              handlePinSuccess();
+            }
+          }
+        }
+      });
+    });
+  }
+
+  function updatePinDots() {
+    pinDots.forEach(function (dot, i) {
+      dot.classList.remove('active', 'success');
+      if (i < pinEntry.length) { dot.classList.add('active'); }
+    });
+  }
+
+  function handlePinSuccess() {
+    pinLocked = true;
+    pinDots.forEach(function (dot) {
+      dot.classList.remove('active');
+      dot.classList.add('success');
+    });
+    if (pinStatus) {
+      pinStatus.textContent = '✓ Unlocked';
+      pinStatus.className = 'pin-status success';
+    }
+    // Transition to Peer Discovery after a brief pause
+    setTimeout(function () {
+      switchToTab('discovery');
+      // Reset PIN after transition
+      setTimeout(function () {
+        pinEntry = [];
+        pinLocked = false;
+        updatePinDots();
+        if (pinStatus) {
+          pinStatus.textContent = '';
+          pinStatus.className = 'pin-status';
+        }
+      }, 800);
+    }, 1200);
+  }
+
+  // --- Discovery Scan Simulation ---
+  var discoveryOverlay = document.getElementById('discovery-overlay');
+  var peerList = document.getElementById('peer-list');
+
+  function triggerDiscoveryScan() {
+    if (!discoveryOverlay || !peerList) return;
+
+    // Show overlay and hide peers
+    discoveryOverlay.classList.add('active');
+    peerList.classList.add('loading');
+
+    setTimeout(function () {
+      discoveryOverlay.classList.remove('active');
+      // Small delay for peers to transition in
+      setTimeout(function () {
+        peerList.classList.remove('loading');
+      }, 50);
+    }, 1400);
+  }
+
+  // --- Chat Input Logic ---
+  var chatInput = document.getElementById('chat-input');
+  var chatSendBtn = document.getElementById('chat-send-btn');
+  var chatContent = document.querySelector('.chat-screen-content');
+
+  var replyMessages = [
+    'Received through the relay mesh! Thanks.',
+    'Message received via Jemar\u2019s node. Signal strong.',
+    'Copy that. Multi-hop confirmed.',
+    'Got it! Relay path verified.',
+    'Roger. Bluetooth mesh link stable.'
+  ];
+  var replyIndex = 0;
+
+  function sendChatMessage() {
+    if (!chatInput || !chatContent) return;
+    var text = chatInput.value.trim();
+    if (text === '') return;
+
+    // Create sent bubble
+    var bubble = document.createElement('div');
+    bubble.className = 'chat-bubble right fade-in';
+    var now = new Date();
+    var timeStr = now.getHours() + ':' + String(now.getMinutes()).padStart(2, '0');
+    bubble.innerHTML = text +
+      '<span class="bubble-time">' + timeStr +
+      ' <span class="bubble-check">✓✓</span></span>';
+    chatContent.appendChild(bubble);
+    chatInput.value = '';
+    chatContent.scrollTop = chatContent.scrollHeight;
+
+    // Auto-reply after delay
+    setTimeout(function () {
+      var reply = document.createElement('div');
+      reply.className = 'chat-bubble left relay-msg fade-in';
+      var replyText = replyMessages[replyIndex % replyMessages.length];
+      replyIndex++;
+      reply.innerHTML =
+        '<small style="font-size: 0.6rem; color: var(--cyan); display: block; margin-bottom: 2px;">[Relay Node Boost]</small>' +
+        replyText +
+        '<span class="bubble-time">' + timeStr + '</span>';
+      chatContent.appendChild(reply);
+      chatContent.scrollTop = chatContent.scrollHeight;
+    }, 1500);
+  }
+
+  if (chatSendBtn) {
+    chatSendBtn.addEventListener('click', sendChatMessage);
+  }
+  if (chatInput) {
+    chatInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        sendChatMessage();
+      }
+    });
+  }
+
+  // --- SOS Overlay ---
+  var sosBtn = document.getElementById('sos-btn');
+  var sosOverlay = document.getElementById('sos-overlay');
+  var sosDismiss = document.getElementById('sos-dismiss');
+
+  if (sosBtn && sosOverlay) {
+    sosBtn.addEventListener('click', function () {
+      sosOverlay.classList.add('active');
+    });
+  }
+  if (sosDismiss && sosOverlay) {
+    sosDismiss.addEventListener('click', function () {
+      sosOverlay.classList.remove('active');
+    });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   fetchLatestRelease();
   initAppGuide();
 });
+
 
