@@ -206,15 +206,15 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        <svg viewBox="0 0 24 24" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
                     </div>
-                    <h3>Simple Android App</h3>
-                    <p>A simple, user-friendly app for your Android phone. Just download, open, and start chatting instantly with your family and barangay leaders.</p>
+                    <h3>End-to-End Encryption</h3>
+                    <p>Ensure your private conversations stay private. BlueMesh features optional encryption that scrambles your messages, making them readable only by you and your recipient.</p>
                     <div class="guide-card-badges" style="margin-top: 16px;">
-                        <span class="guide-badge">Kotlin & Compose</span>
+                        <span class="guide-badge">AES-GCM-128</span>
+                        <span class="guide-badge">ECDH Key Exchange</span>
                     </div>
                 </div>
 
@@ -226,10 +226,11 @@
                         </svg>
                     </div>
                     <h3>Smart Offline Delivery</h3>
-                    <p>If a neighbor is out of range, the app stores your message and sends it automatically the moment they get closer, ensuring no message is lost.</p>
+                    <p>If a neighbor is out of range, the app stores your message and sends it automatically. Messages are compressed and dynamically split to fit Bluetooth packet sizes perfectly.</p>
                     <div class="guide-card-badges" style="margin-top: 16px;">
                         <span class="guide-badge">SQLite Queue</span>
                         <span class="guide-badge">LZ4 Compression</span>
+                        <span class="guide-badge">Dynamic MTU</span>
                     </div>
                 </div>
 
@@ -275,7 +276,7 @@
                     <div class="step-number">02</div>
                     <div class="step-content">
                         <h3>Get the App</h3>
-                        <p>Download the free BlueMesh app on your Android phone. There are no accounts to create, no phone numbers needed, and no registration forms.</p>
+                        <p>Download the free BlueMesh app on your Android phone. Simply enter a display name and set your local lock passcode — no registration or phone number required.</p>
                     </div>
                 </div>
 
@@ -326,14 +327,14 @@
                         <h3>Private & Secure Lock</h3>
                         <p class="guide-card-desc">Keeps your messages locked safely on your phone and out of the wrong hands.</p>
                         <ul class="guide-card-details">
-                            <li><strong>Private Chat Logs:</strong> Your chat history is encrypted and locked on your phone, so nobody else can read it.</li>
-                            <li><strong>Auto-Lock:</strong> The app locks itself if left idle for 5 minutes, keeping your chats safe if you leave your phone.</li>
-                            <li><strong>No Cloud/No Server:</strong> Your lock passcode is saved only on your phone, never sent to the internet.</li>
-                            <li><strong>Safety Lockout:</strong> Prevents strangers from guessing your passcode by temporary lockouts after failed attempts.</li>
+                            <li><strong>End-to-End Encryption (E2EE):</strong> Optional secure messaging using ECDH key exchange and AES-GCM-128 encryption, keeping your texts readable only by you and your recipient.</li>
+                            <li><strong>Private Chat Logs:</strong> Chat history is stored locally in an encrypted database on your device.</li>
+                            <li><strong>Auto-Lock:</strong> Closes active sessions automatically after 5 minutes of inactivity.</li>
+                            <li><strong>Zero-Cloud Dependency:</strong> Authentication is handled strictly on-device with no external server queries.</li>
                         </ul>
                         <div class="guide-card-badges">
+                            <span class="guide-badge">AES-GCM-128</span>
                             <span class="guide-badge">Passcode Lock</span>
-                            <span class="guide-badge">SQLite Encryption</span>
                         </div>
                     </div>
                 </div>
@@ -355,14 +356,14 @@
                         <h3>Neighbor Finder</h3>
                         <p class="guide-card-desc">Finds nearby active neighbors and maps signal paths without internet connection.</p>
                         <ul class="guide-card-details">
+                            <li><strong>Battery Optimization:</strong> Intelligently manages Bluetooth scanning in the background to save your phone's battery life.</li>
                             <li><strong>Automatic Scan:</strong> Instantly finds nearby active phones and community signal boxes.</li>
                             <li><strong>Distance Helper:</strong> Shows you approximately how close or far away your neighbors are based on signal strength.</li>
-                            <li><strong>Instant Connection:</strong> Connects directly and dynamically without needing any manual setup.</li>
-                            <li><strong>Barangay Network:</strong> Keeps an updated list of who is nearby to help deliver your messages.</li>
+                            <li><strong>GATT Connections:</strong> Connects directly and dynamically via point-to-point BLE GATT.</li>
                         </ul>
                         <div class="guide-card-badges">
-                            <span class="guide-badge">BLE 5.2</span>
-                            <span class="guide-badge">RSSI Range</span>
+                            <span class="guide-badge">BLE GATT</span>
+                            <span class="guide-badge">Battery Saved</span>
                         </div>
                     </div>
                 </div>
@@ -381,14 +382,15 @@
                         <h3>Offline Messaging</h3>
                         <p class="guide-card-desc">Compresses and sends text messages safely through other phones in the area.</p>
                         <ul class="guide-card-details">
-                            <li><strong>Super-Fast Delivery:</strong> Compresses text to send messages faster over Bluetooth.</li>
+                            <li><strong>Super-Fast Delivery:</strong> Compresses text using LZ4 to shorten transmission times.</li>
                             <li><strong>Delayed Delivery:</strong> If a neighbor is currently out of range, the app holds your message and sends it the moment they connect.</li>
-                            <li><strong>Smart Message Splitting:</strong> Automatically cuts long messages into small packets to ensure reliable delivery.</li>
+                            <li><strong>Smart Message Splitting:</strong> Automatically splits payloads dynamically to match Bluetooth packet sizes (MTU).</li>
                             <li><strong>Community Relaying:</strong> Messages hop through other users' phones to travel across the barangay.</li>
                         </ul>
                         <div class="guide-card-badges">
                             <span class="guide-badge">LZ4 Compress</span>
                             <span class="guide-badge">SQLite Queue</span>
+                            <span class="guide-badge">Dynamic MTU</span>
                         </div>
                     </div>
                 </div>
@@ -433,7 +435,7 @@
                     <span class="section-tag">About the Project</span>
                     <h2>Communication for <span class="gradient-text">Every Barangay</span></h2>
                     <p><strong>BlueMesh</strong> is an open‑source, direct phone‑to‑phone messaging app designed for local communities. It lets you send text messages entirely without cellular load, internet, or WiFi, using solar‑powered boosters to extend the signal across the neighborhood.</p>
-<p>It features easy distance indicators, optional location sharing for emergencies, a secure app passcode lock, an automated offline message saver, text compression for fast delivery, and full support for the latest Android phones.</p>
+<p>It features optional End-to-End Encryption (E2EE), easy distance indicators, optional location sharing for emergencies, a secure app passcode lock, background battery optimization, and dynamic text compression for fast, reliable delivery.</p>
 
                     <!-- BitChat reference link -->
                     <a href="https://github.com/reikkikun-PH/BlueMesh" target="_blank" class="btn btn-outline" style="margin-top: 12px;">🔗 View BlueMesh Repository on GitHub</a>
@@ -455,7 +457,7 @@
                             <span class="tech-dot blue"></span>
                             <div>
                                 <strong>Kotlin &amp; Jetpack Compose</strong>
-                                <small>Native Android application interface</small>
+                                <small>Native Android app with Compose keyboard adjustments</small>
                             </div>
                         </div>
                         <div class="tech-item">
@@ -576,7 +578,7 @@
 
                 <div class="download-grid">
                     <!-- Android download -->
-                    <a href="https://github.com/reikkikun-PH/BlueMesh/releases/download/v27.9/BlueMesh-v27.9.apk"
+                    <a href="https://github.com/reikkikun-PH/BlueMesh/releases/download/v28.31/BlueMesh-v28.31.apk"
                         class="download-card" id="download-android">
                         <svg class="download-svg" viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: currentColor; flex-shrink: 0;">
                             <path d="M17.523 15.3c-.383 0-.692-.31-.692-.695c0-.383.31-.693.692-.693c.383 0 .693.31.693.693c0 .385-.31.695-.693.695zm-11.046 0c-.383 0-.693-.31-.693-.695c0-.383.31-.693.693-.693c.383 0 .693.31.693.693c0 .385-.31.695-.693.695zm11.24-4.577l1.797-3.114a.449.449 0 0 0-.164-.614a.453.453 0 0 0-.617.164l-1.82 3.15a11.096 11.096 0 0 0-9.826 0l-1.82-3.15a.456.456 0 0 0-.78.45l1.796 3.114A11.353 11.353 0 0 0 1.25 20h21.5c0-3.565-1.688-6.733-4.32-8.79z"></path>
@@ -584,7 +586,7 @@
                         <div class="download-info">
                             <span class="download-label">Download for</span>
                             <span class="download-platform">Android</span>
-                            <span class="download-meta">APK • v27.9</span>
+                            <span class="download-meta">APK • v28.31</span>
                         </div>
                     </a>
                 </div>
