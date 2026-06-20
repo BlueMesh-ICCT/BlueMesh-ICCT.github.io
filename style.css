@@ -515,6 +515,10 @@ section {
   gap: 24px;
 }
 
+#evaluation {
+  padding: 100px 24px;
+}
+
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -526,42 +530,44 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
 }
 
 .metric-card h3 {
-  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.metric-card p {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .metric-value {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  display: block;
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-family: var(--font-heading);
+  line-height: 1;
   margin-bottom: 8px;
 }
 
 .metric-value.blue-val {
   color: var(--blue);
-  background: rgba(59, 130, 246, 0.06);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  text-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
 }
 
 .metric-value.cyan-val {
   color: var(--cyan);
-  background: rgba(6, 182, 212, 0.06);
-  border: 1px solid rgba(6, 182, 212, 0.15);
+  text-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
 }
 
 .metric-value.indigo-val {
   color: var(--indigo);
-  background: rgba(99, 102, 241, 0.06);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  text-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
 }
 
 
