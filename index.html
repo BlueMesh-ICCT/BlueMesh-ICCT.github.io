@@ -327,10 +327,10 @@
                         <h3>Private & Secure Lock</h3>
                         <p class="guide-card-desc">Keeps your messages locked safely on your phone and out of the wrong hands.</p>
                         <ul class="guide-card-details">
-                            <li><strong>End-to-End Encryption (E2EE):</strong> Optional secure messaging using ECDH key exchange and AES-GCM-128 encryption, keeping your texts readable only by you and your recipient.</li>
-                            <li><strong>Private Chat Logs:</strong> Chat history is stored locally in an encrypted database on your device.</li>
-                            <li><strong>Auto-Lock:</strong> Closes active sessions automatically after 5 minutes of inactivity.</li>
-                            <li><strong>Zero-Cloud Dependency:</strong> Authentication is handled strictly on-device with no external server queries.</li>
+                            <li><strong>End-to-End Encryption:</strong> Optional secure chat that locks your messages so that only you and your chat partner can read them—no middleman can intercept them.</li>
+                            <li><strong>Private Local Storage:</strong> Your chat history is stored only on your own phone and locked behind your passcode, never sent to the internet.</li>
+                            <li><strong>Auto-Lock Protection:</strong> The app automatically locks itself if left idle for 5 minutes, protecting your privacy if you leave your phone unattended.</li>
+                            <li><strong>No Internet Required:</strong> Your lock passcode is checked entirely on your phone. No logins, accounts, or internet connection ever needed.</li>
                         </ul>
                         <div class="guide-card-badges">
                             <span class="guide-badge">AES-GCM-128</span>
@@ -356,10 +356,10 @@
                         <h3>Neighbor Finder</h3>
                         <p class="guide-card-desc">Finds nearby active neighbors and maps signal paths without internet connection.</p>
                         <ul class="guide-card-details">
-                            <li><strong>Battery Optimization:</strong> Intelligently manages Bluetooth scanning in the background to save your phone's battery life.</li>
-                            <li><strong>Automatic Scan:</strong> Instantly finds nearby active phones and community signal boxes.</li>
-                            <li><strong>Distance Helper:</strong> Shows you approximately how close or far away your neighbors are based on signal strength.</li>
-                            <li><strong>GATT Connections:</strong> Connects directly and dynamically via point-to-point BLE GATT.</li>
+                            <li><strong>Smart Battery Saving:</strong> Intelligently runs Bluetooth in the background so it doesn't drain your phone's battery.</li>
+                            <li><strong>Instant Neighbor Search:</strong> Automatically searches and finds nearby friends and community solar boxes without setup.</li>
+                            <li><strong>Distance Indicator:</strong> Displays a helpful estimate of how close your neighbors are based on their signal.</li>
+                            <li><strong>Direct Phone-to-Phone Connection:</strong> Connects your phone directly to another device or solar booster for reliable delivery.</li>
                         </ul>
                         <div class="guide-card-badges">
                             <span class="guide-badge">BLE GATT</span>
@@ -382,10 +382,10 @@
                         <h3>Offline Messaging</h3>
                         <p class="guide-card-desc">Compresses and sends text messages safely through other phones in the area.</p>
                         <ul class="guide-card-details">
-                            <li><strong>Super-Fast Delivery:</strong> Compresses text using LZ4 to shorten transmission times.</li>
-                            <li><strong>Delayed Delivery:</strong> If a neighbor is currently out of range, the app holds your message and sends it the moment they connect.</li>
-                            <li><strong>Smart Message Splitting:</strong> Automatically splits payloads dynamically to match Bluetooth packet sizes (MTU).</li>
-                            <li><strong>Community Relaying:</strong> Messages hop through other users' phones to travel across the barangay.</li>
+                            <li><strong>Instant Compression:</strong> Automatically shrinks text size so messages travel much faster over Bluetooth channels.</li>
+                            <li><strong>Automatic Message Delivery:</strong> If your friend is too far away, the app saves your message and sends it automatically the instant they come back in range.</li>
+                            <li><strong>Smart Splitting:</strong> Splits long messages into smaller parts so they travel reliably across the network without failing.</li>
+                            <li><strong>Signal Hopping:</strong> Messages can jump from phone to phone, using neighboring devices to reach people further away.</li>
                         </ul>
                         <div class="guide-card-badges">
                             <span class="guide-badge">LZ4 Compress</span>
@@ -410,10 +410,10 @@
                         <h3>Emergency SOS & Safety</h3>
                         <p class="guide-card-desc">Send instant emergency signals and voluntarily share safety coordinates.</p>
                         <ul class="guide-card-details">
-                            <li><strong>Optional Location:</strong> Share your exact location coordinates with emergency responders or neighbors only if you choose to.</li>
-                            <li><strong>Emergency SOS Siren:</strong> Send a loud, high-priority emergency alert to everyone in the mesh with one tap.</li>
-                            <li><strong>Outage Prepared:</strong> Specially built to coordinate rescue operations during storms and grid failures.</li>
-                            <li><strong>Solar Box Relaying:</strong> Automatically forwards emergency alerts to the solar boosters to spread the word fast.</li>
+                            <li><strong>Safe Location Sharing:</strong> Share your location with emergency responders or neighbors during a crisis only if you choose to turn it on.</li>
+                            <li><strong>One-Tap Emergency Alert:</strong> Send a priority distress signal that instantly alerts everyone connected to the local network.</li>
+                            <li><strong>Disaster Ready:</strong> Built specifically to help coordinate safety checks and rescue operations when cell towers are down.</li>
+                            <li><strong>Solar Booster Alerts:</strong> Instantly routes your emergency calls through nearby solar boosters to broadcast it to the whole barangay quickly.</li>
                         </ul>
                         <div class="guide-card-badges">
                             <span class="guide-badge">GPS Share</span>
@@ -487,37 +487,6 @@
         </div>
     </section>
 
-
-    <!-- Evaluation Section -->
-    <section id="evaluation">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 64px;">
-                <span class="section-tag">Evaluation Results</span>
-                <h2>Validated by <span class="gradient-text">User Trials</span></h2>
-                <p>Purposive user acceptance testing with 20 IT, Engineering, and non-technical respondents was conducted to validate usability and multi-hop relay success.</p>
-            </div>
-
-            <div class="metrics-grid">
-                <div class="feature-card metric-card">
-                    <div class="metric-value blue-val">90%</div>
-                    <h3>Multi-Hop Relay Success</h3>
-                    <p>90% of tested transmission runs successfully propagated across multi-hop relay nodes (65% working seamlessly, 25% with minor propagation delay).</p>
-                </div>
-
-                <div class="feature-card metric-card">
-                    <div class="metric-value cyan-val">3.88</div>
-                    <h3>Usability Score (Mean)</h3>
-                    <p>Overall rating of 3.88 (Agree) on a 5-point Likert scale. UI Ease of Use and Message Transmission Speed scored highest at 4.15/5.00.</p>
-                </div>
-
-                <div class="feature-card metric-card">
-                    <div class="metric-value indigo-val">75%</div>
-                    <h3>Emergency Use Case</h3>
-                    <p>75% of evaluators identified Emergency/Disaster Response as the primary intended use case, strongly validating the off-grid design focus.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Team Section -->
