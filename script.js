@@ -83,6 +83,11 @@ document.addEventListener('contextmenu', function (e) {
 
 /* --- Fetch Latest GitHub Release --- */
 function fetchLatestRelease() {
+  var downloadCard = document.getElementById('download-android');
+  if (downloadCard && downloadCard.classList.contains('maintenance')) {
+    return;
+  }
+
   var repo = 'reikkikun-PH/BlueMesh';
   var apiUrl = 'https://api.github.com/repos/' + repo + '/releases/latest';
 
