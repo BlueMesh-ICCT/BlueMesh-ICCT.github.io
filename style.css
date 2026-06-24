@@ -98,92 +98,92 @@
 
 /* --- Light Theme Variables --- */
 .light-theme {
-  --bg-dark: #ebf1f5;
-  --bg-card: rgba(255, 255, 255, 0.75);
-  --bg-card-hover: rgba(255, 255, 255, 0.95);
-  --border: rgba(15, 23, 42, 0.06);
-  --border-hover: rgba(15, 23, 42, 0.12);
+  --bg-dark: #eef3f6;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  --border: rgba(148, 163, 184, 0.12);
+  --border-hover: rgba(148, 163, 184, 0.25);
   --text-white: #0f172a;
   --text-gray: #475569;
   --text-muted: #64748b;
   --blue: #0f172a;
   --cyan: #3b82f6;
   --indigo: #4f46e5;
-  --shadow-soft: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
-  --shadow-hover: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
+  --shadow-soft: 0 10px 30px -5px rgba(164, 180, 203, 0.25);
+  --shadow-hover: 0 20px 40px -10px rgba(164, 180, 203, 0.38);
   
-  --body-bg-image: radial-gradient(circle at 50% 0%, #f4f8fa 0%, #ebf1f5 70%);
-  --glow-1-bg: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
-  --glow-2-bg: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
-  --glow-3-bg: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+  --body-bg-image: radial-gradient(circle at 50% 0%, #f7fafc 0%, #eef3f6 70%);
+  --glow-1-bg: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
+  --glow-2-bg: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+  --glow-3-bg: radial-gradient(circle, rgba(99, 102, 241, 0.02) 0%, transparent 70%);
   --navbar-bg: rgba(255, 255, 255, 0.7);
-  --navbar-border: rgba(15, 23, 42, 0.05);
+  --navbar-border: rgba(164, 180, 203, 0.15);
   --navbar-scrolled-bg: rgba(255, 255, 255, 0.85);
-  --navbar-scrolled-border: rgba(15, 23, 42, 0.08);
+  --navbar-scrolled-border: rgba(164, 180, 203, 0.2);
   --navbar-scrolled-shadow: var(--shadow-soft);
-  --nav-cta-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
-  --nav-cta-hover-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+  --nav-cta-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+  --nav-cta-hover-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
   
-  --btn-primary-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
-  --btn-primary-hover-shadow: 0 8px 25px rgba(15, 23, 42, 0.15);
+  --btn-primary-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+  --btn-primary-hover-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
   --btn-outline-bg: rgba(15, 23, 42, 0.02);
   --btn-outline-hover-bg: rgba(15, 23, 42, 0.05);
   --btn-radius: 20px;
   
-  --section-tag-bg: rgba(59, 130, 246, 0.05);
-  --section-tag-border: rgba(59, 130, 246, 0.12);
+  --section-tag-bg: rgba(15, 23, 42, 0.03);
+  --section-tag-border: rgba(15, 23, 42, 0.08);
   
-  --hero-badge-bg: rgba(15, 23, 42, 0.04);
-  --hero-badge-border: rgba(15, 23, 42, 0.08);
-  --border-line: rgba(15, 23, 42, 0.06);
+  --hero-badge-bg: rgba(15, 23, 42, 0.03);
+  --hero-badge-border: rgba(15, 23, 42, 0.06);
+  --border-line: rgba(164, 180, 203, 0.15);
   
-  --node-bg: rgba(255, 255, 255, 0.95);
-  --node-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
-  --hub-border: rgba(15, 23, 42, 0.1);
-  --hub-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+  --node-bg: #ffffff;
+  --node-shadow: 0 4px 12px rgba(164, 180, 203, 0.15);
+  --hub-border: rgba(15, 23, 42, 0.08);
+  --hub-shadow: 0 6px 16px rgba(164, 180, 203, 0.2);
   
   --card-radius: 24px;
   --shadow-card-hover: var(--shadow-hover);
   --shadow-card-hover-simple: var(--shadow-soft);
-  --feature-icon-bg: rgba(15, 23, 42, 0.04);
-  --feature-icon-border: rgba(15, 23, 42, 0.08);
+  --feature-icon-bg: rgba(164, 180, 203, 0.1);
+  --feature-icon-border: rgba(164, 180, 203, 0.2);
   --feature-icon-radius: 14px;
   
-  --highlights-bg: rgba(15, 23, 42, 0.02);
-  --highlights-border: rgba(15, 23, 42, 0.04);
+  --highlights-bg: rgba(164, 180, 203, 0.05);
+  --highlights-border: rgba(164, 180, 203, 0.1);
   --highlights-shadow: none;
   
   --tech-card-shadow: var(--shadow-soft);
-  --tech-item-bg: rgba(15, 23, 42, 0.01);
-  --tech-item-border: rgba(15, 23, 42, 0.04);
+  --tech-item-bg: rgba(164, 180, 203, 0.03);
+  --tech-item-border: rgba(164, 180, 203, 0.08);
   --tech-item-radius: 14px;
-  --tech-item-hover-bg: rgba(15, 23, 42, 0.03);
+  --tech-item-hover-bg: rgba(164, 180, 203, 0.08);
   --tech-dot-shadow: none;
   
-  --avatar-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --avatar-shadow: 0 2px 8px rgba(164, 180, 203, 0.15);
   
-  --download-box-bg: var(--bg-card);
-  --download-box-border: 1px solid var(--border);
+  --download-box-bg: #ffffff;
+  --download-box-border: 1px solid rgba(164, 180, 203, 0.15);
   --download-box-radius: 32px;
   --download-box-shadow: var(--shadow-soft);
   
   --download-card-radius: 20px;
-  --download-card-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
-  --download-card-hover-shadow: 0 12px 35px rgba(15, 23, 42, 0.2);
-  --download-card-m-bg: rgba(15, 23, 42, 0.05);
-  --download-card-m-border: rgba(15, 23, 42, 0.08);
+  --download-card-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --download-card-hover-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+  --download-card-m-bg: rgba(164, 180, 203, 0.15);
+  --download-card-m-border: rgba(164, 180, 203, 0.25);
   --download-card-m-color: var(--text-muted);
   
   --guide-card-shadow: var(--shadow-soft);
   --guide-card-hover-shadow: var(--shadow-hover);
-  --guide-card-icon-bg: rgba(59, 130, 246, 0.06);
-  --guide-card-icon-border: rgba(59, 130, 246, 0.15);
-  --guide-card-icon-hover-bg: rgba(59, 130, 246, 0.12);
+  --guide-card-icon-bg: rgba(164, 180, 203, 0.15);
+  --guide-card-icon-border: rgba(164, 180, 203, 0.25);
+  --guide-card-icon-hover-bg: rgba(164, 180, 203, 0.25);
   --guide-card-icon-hover-shadow: none;
   --guide-card-number-color: rgba(15, 23, 42, 0.04);
   --guide-card-number-hover-shadow: none;
-  --guide-badge-bg: rgba(15, 23, 42, 0.03);
-  --guide-badge-border: rgba(15, 23, 42, 0.08);
+  --guide-badge-bg: rgba(164, 180, 203, 0.08);
+  --guide-badge-border: rgba(164, 180, 203, 0.15);
 }
 
 * {
