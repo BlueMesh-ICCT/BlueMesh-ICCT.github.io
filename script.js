@@ -158,6 +158,24 @@ function fetchLatestRelease() {
 
 document.addEventListener('DOMContentLoaded', function () {
   fetchLatestRelease();
+  initThemeToggle();
 });
+
+/* --- Theme Toggle System --- */
+function initThemeToggle() {
+  var themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+
+  // Toggle theme on click
+  themeToggle.addEventListener('click', function () {
+    if (document.documentElement.classList.contains('light-theme')) {
+      document.documentElement.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
 
 

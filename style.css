@@ -2,7 +2,102 @@
    1. VARIABLES & RESET
    ========================================================================== */
 
+/* --- Default Dark Theme Variables --- */
 :root {
+  --bg-dark: #06080c;
+  --bg-card: rgba(13, 20, 35, 0.45);
+  --bg-card-hover: rgba(20, 30, 50, 0.6);
+  --border: rgba(59, 130, 246, 0.08);
+  --border-hover: rgba(6, 182, 212, 0.25);
+  --text-white: #f3f4f6;
+  --text-gray: #9ca3af;
+  --text-muted: #6b7280;
+  --blue: #3b82f6;
+  --cyan: #06b6d4;
+  --indigo: #6366f1;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.35), 0 0 25px rgba(59, 130, 246, 0.1);
+  
+  /* Themed gradients & backgrounds */
+  --body-bg-image: radial-gradient(circle at 50% 0%, rgba(13, 27, 56, 0.4) 0%, rgba(6, 8, 12, 1) 70%);
+  --glow-1-bg: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  --glow-2-bg: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+  --glow-3-bg: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  --navbar-bg: rgba(6, 8, 12, 0.6);
+  --navbar-border: rgba(255, 255, 255, 0.05);
+  --navbar-scrolled-bg: rgba(6, 8, 12, 0.8);
+  --navbar-scrolled-border: rgba(59, 130, 246, 0.15);
+  --navbar-scrolled-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --nav-cta-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+  --nav-cta-hover-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  
+  --btn-primary-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+  --btn-primary-hover-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  --btn-outline-bg: rgba(255, 255, 255, 0.02);
+  --btn-outline-hover-bg: rgba(255, 255, 255, 0.05);
+  --btn-radius: 12px;
+  
+  --section-tag-bg: rgba(6, 182, 212, 0.06);
+  --section-tag-border: rgba(6, 182, 212, 0.15);
+  
+  --hero-badge-bg: rgba(59, 130, 246, 0.06);
+  --hero-badge-border: rgba(59, 130, 246, 0.15);
+  --border-line: rgba(255, 255, 255, 0.06);
+  
+  --node-bg: rgba(13, 20, 35, 0.8);
+  --node-shadow: 0 0 20px rgba(6, 182, 212, 0.15);
+  --hub-border: rgba(59, 130, 246, 0.4);
+  --hub-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+  
+  --card-radius: 20px;
+  --shadow-card-hover: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 25px rgba(59, 130, 246, 0.1);
+  --shadow-card-hover-simple: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --feature-icon-bg: rgba(59, 130, 246, 0.08);
+  --feature-icon-border: rgba(59, 130, 246, 0.15);
+  --feature-icon-radius: 12px;
+  
+  --highlights-bg: rgba(255, 255, 255, 0.02);
+  --highlights-border: rgba(255, 255, 255, 0.04);
+  --highlights-shadow: 0 0 8px var(--cyan);
+  
+  --tech-card-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  --tech-item-bg: rgba(255, 255, 255, 0.01);
+  --tech-item-border: rgba(255, 255, 255, 0.03);
+  --tech-item-radius: 10px;
+  --tech-item-hover-bg: rgba(59, 130, 246, 0.05);
+  --tech-dot-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  
+  --avatar-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  
+  --download-box-bg: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), rgba(13, 20, 35, 0.7));
+  --download-box-border: 1px solid rgba(59, 130, 246, 0.15);
+  --download-box-radius: 28px;
+  --download-box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  
+  --download-card-radius: 16px;
+  --download-card-shadow: 0 8px 25px rgba(59, 130, 246, 0.25);
+  --download-card-hover-shadow: 0 12px 35px rgba(59, 130, 246, 0.45);
+  --download-card-m-bg: rgba(255, 255, 255, 0.05);
+  --download-card-m-border: rgba(255, 255, 255, 0.1);
+  --download-card-m-color: var(--text-gray);
+  
+  --guide-card-shadow: none;
+  --guide-card-hover-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(6, 182, 212, 0.05);
+  --guide-card-icon-bg: rgba(6, 182, 212, 0.06);
+  --guide-card-icon-border: rgba(6, 182, 212, 0.15);
+  --guide-card-icon-hover-bg: rgba(6, 182, 212, 0.12);
+  --guide-card-icon-hover-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  --guide-card-number-color: rgba(255, 255, 255, 0.1);
+  --guide-card-number-hover-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  --guide-badge-bg: rgba(255, 255, 255, 0.03);
+  --guide-badge-border: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Light Theme Variables --- */
+.light-theme {
   --bg-dark: #ebf1f5;
   --bg-card: rgba(255, 255, 255, 0.75);
   --bg-card-hover: rgba(255, 255, 255, 0.95);
@@ -14,11 +109,81 @@
   --blue: #0f172a;
   --cyan: #3b82f6;
   --indigo: #4f46e5;
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow-soft: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
   --shadow-hover: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
+  
+  --body-bg-image: radial-gradient(circle at 50% 0%, #f4f8fa 0%, #ebf1f5 70%);
+  --glow-1-bg: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+  --glow-2-bg: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  --glow-3-bg: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+  --navbar-bg: rgba(255, 255, 255, 0.7);
+  --navbar-border: rgba(15, 23, 42, 0.05);
+  --navbar-scrolled-bg: rgba(255, 255, 255, 0.85);
+  --navbar-scrolled-border: rgba(15, 23, 42, 0.08);
+  --navbar-scrolled-shadow: var(--shadow-soft);
+  --nav-cta-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+  --nav-cta-hover-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+  
+  --btn-primary-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+  --btn-primary-hover-shadow: 0 8px 25px rgba(15, 23, 42, 0.15);
+  --btn-outline-bg: rgba(15, 23, 42, 0.02);
+  --btn-outline-hover-bg: rgba(15, 23, 42, 0.05);
+  --btn-radius: 20px;
+  
+  --section-tag-bg: rgba(59, 130, 246, 0.05);
+  --section-tag-border: rgba(59, 130, 246, 0.12);
+  
+  --hero-badge-bg: rgba(15, 23, 42, 0.04);
+  --hero-badge-border: rgba(15, 23, 42, 0.08);
+  --border-line: rgba(15, 23, 42, 0.06);
+  
+  --node-bg: rgba(255, 255, 255, 0.95);
+  --node-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --hub-border: rgba(15, 23, 42, 0.1);
+  --hub-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+  
+  --card-radius: 24px;
+  --shadow-card-hover: var(--shadow-hover);
+  --shadow-card-hover-simple: var(--shadow-soft);
+  --feature-icon-bg: rgba(15, 23, 42, 0.04);
+  --feature-icon-border: rgba(15, 23, 42, 0.08);
+  --feature-icon-radius: 14px;
+  
+  --highlights-bg: rgba(15, 23, 42, 0.02);
+  --highlights-border: rgba(15, 23, 42, 0.04);
+  --highlights-shadow: none;
+  
+  --tech-card-shadow: var(--shadow-soft);
+  --tech-item-bg: rgba(15, 23, 42, 0.01);
+  --tech-item-border: rgba(15, 23, 42, 0.04);
+  --tech-item-radius: 14px;
+  --tech-item-hover-bg: rgba(15, 23, 42, 0.03);
+  --tech-dot-shadow: none;
+  
+  --avatar-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  
+  --download-box-bg: var(--bg-card);
+  --download-box-border: 1px solid var(--border);
+  --download-box-radius: 32px;
+  --download-box-shadow: var(--shadow-soft);
+  
+  --download-card-radius: 20px;
+  --download-card-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+  --download-card-hover-shadow: 0 12px 35px rgba(15, 23, 42, 0.2);
+  --download-card-m-bg: rgba(15, 23, 42, 0.05);
+  --download-card-m-border: rgba(15, 23, 42, 0.08);
+  --download-card-m-color: var(--text-muted);
+  
+  --guide-card-shadow: var(--shadow-soft);
+  --guide-card-hover-shadow: var(--shadow-hover);
+  --guide-card-icon-bg: rgba(59, 130, 246, 0.06);
+  --guide-card-icon-border: rgba(59, 130, 246, 0.15);
+  --guide-card-icon-hover-bg: rgba(59, 130, 246, 0.12);
+  --guide-card-icon-hover-shadow: none;
+  --guide-card-number-color: rgba(15, 23, 42, 0.04);
+  --guide-card-number-hover-shadow: none;
+  --guide-badge-bg: rgba(15, 23, 42, 0.03);
+  --guide-badge-border: rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -31,7 +196,7 @@
 body {
   font-family: var(--font-sans);
   background: var(--bg-dark);
-  background-image: radial-gradient(circle at 50% 0%, #f4f8fa 0%, #ebf1f5 70%);
+  background-image: var(--body-bg-image);
   color: var(--text-white);
   line-height: 1.6;
   overflow-x: hidden;
@@ -72,7 +237,7 @@ img {
   left: 15%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+  background: var(--glow-1-bg);
 }
 
 .glow-2 {
@@ -80,7 +245,7 @@ img {
   right: 10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+  background: var(--glow-2-bg);
 }
 
 .glow-3 {
@@ -88,7 +253,7 @@ img {
   left: 20%;
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.04) 0%, transparent 70%);
+  background: var(--glow-3-bg);
 }
 
 /* ==========================================================================
@@ -104,19 +269,19 @@ img {
   max-width: 1000px;
   height: 64px;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--navbar-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(15, 23, 42, 0.05);
+  border: 1px solid var(--navbar-border);
   border-radius: 32px;
   padding: 0 24px;
   transition: var(--transition);
 }
 
 #navbar.scrolled {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(15, 23, 42, 0.08);
-  box-shadow: var(--shadow-soft);
+  background: var(--navbar-scrolled-bg);
+  border-color: var(--navbar-scrolled-border);
+  box-shadow: var(--navbar-scrolled-shadow);
   top: 12px;
 }
 
@@ -163,12 +328,12 @@ img {
   color: #fff !important;
   border-radius: 20px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--nav-cta-shadow);
 }
 
 .nav-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.15);
+  box-shadow: var(--nav-cta-hover-shadow);
 }
 
 .nav-toggle {
@@ -214,7 +379,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: var(--btn-radius);
   cursor: pointer;
   transition: var(--transition);
   border: none;
@@ -223,23 +388,23 @@ h1, h2, h3, h4 {
 .btn-primary {
   background: linear-gradient(135deg, var(--blue), var(--cyan));
   color: #fff;
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+  box-shadow: var(--btn-primary-shadow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.15);
+  box-shadow: var(--btn-primary-hover-shadow);
 }
 
 .btn-outline {
-  background: rgba(15, 23, 42, 0.02);
+  background: var(--btn-outline-bg);
   color: var(--text-gray);
   border: 1px solid var(--border);
 }
 
 .btn-outline:hover {
   color: var(--text-white);
-  background: rgba(15, 23, 42, 0.05);
+  background: var(--btn-outline-hover-bg);
   border-color: var(--border-hover);
   transform: translateY(-1px);
 }
@@ -274,8 +439,8 @@ section {
   color: var(--cyan);
   margin-bottom: 12px;
   padding: 4px 12px;
-  background: rgba(59, 130, 246, 0.05);
-  border: 1px solid rgba(59, 130, 246, 0.12);
+  background: var(--section-tag-bg);
+  border: 1px solid var(--section-tag-border);
   border-radius: 20px;
 }
 
@@ -318,8 +483,8 @@ section {
 .hero-badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(15, 23, 42, 0.04);
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--hero-badge-bg);
+  border: 1px solid var(--hero-badge-border);
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -359,8 +524,8 @@ section {
   display: flex;
   justify-content: flex-start;
   gap: 48px;
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  border-top: 1px solid var(--border-line);
+  border-bottom: 1px solid var(--border-line);
   padding: 20px 0;
   width: 100%;
   max-width: 500px;
@@ -407,14 +572,14 @@ section {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--node-bg);
   border: 1px solid var(--border-hover);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--cyan);
   z-index: 2;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  box-shadow: var(--node-shadow);
 }
 
 .node.hub {
@@ -423,8 +588,8 @@ section {
   width: 60px;
   height: 60px;
   color: var(--blue);
-  border-color: rgba(15, 23, 42, 0.1);
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+  border-color: var(--hub-border);
+  box-shadow: var(--hub-shadow);
 }
 
 .node.client-1 {
@@ -519,7 +684,7 @@ section {
   padding: 36px 30px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: var(--card-radius);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
@@ -529,7 +694,7 @@ section {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
   transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .feature-icon {
@@ -539,9 +704,9 @@ section {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(15, 23, 42, 0.04);
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--feature-icon-bg);
+  border-radius: var(--feature-icon-radius);
+  border: 1px solid var(--feature-icon-border);
   color: var(--cyan);
 }
 
@@ -586,7 +751,7 @@ section {
   padding: 30px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: var(--card-radius);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: var(--transition);
@@ -596,7 +761,7 @@ section {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
   transform: translateX(4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-card-hover-simple);
 }
 
 .step-number {
@@ -664,8 +829,8 @@ section {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(15, 23, 42, 0.02);
-  border: 1px solid rgba(15, 23, 42, 0.04);
+  background: var(--highlights-bg);
+  border: 1px solid var(--highlights-border);
   padding: 10px 14px;
   border-radius: 12px;
 }
@@ -677,6 +842,7 @@ section {
   height: 6px;
   background: var(--cyan);
   border-radius: 50%;
+  box-shadow: var(--highlights-shadow);
   flex-shrink: 0;
 }
 
@@ -687,7 +853,7 @@ section {
   padding: 32px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--tech-card-shadow);
 }
 
 .tech-card h4 {
@@ -704,15 +870,15 @@ section {
   align-items: center;
   gap: 14px;
   padding: 12px 14px;
-  background: rgba(15, 23, 42, 0.01);
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.04);
+  background: var(--tech-item-bg);
+  border-radius: var(--tech-item-radius);
+  border: 1px solid var(--tech-item-border);
   margin-bottom: 10px;
   transition: var(--transition);
 }
 
 .tech-item:hover {
-  background: rgba(15, 23, 42, 0.03);
+  background: var(--tech-item-hover-bg);
   border-color: var(--border-hover);
   transform: scale(1.02);
 }
@@ -730,18 +896,22 @@ section {
 
 .tech-dot.blue {
   background: var(--blue);
+  box-shadow: var(--tech-dot-shadow);
 }
 
 .tech-dot.yellow {
   background: #f59e0b;
+  box-shadow: var(--tech-dot-shadow);
 }
 
 .tech-dot.cyan {
   background: #06b6d4;
+  box-shadow: var(--tech-dot-shadow);
 }
 
 .tech-dot.green {
   background: #10b981;
+  box-shadow: var(--tech-dot-shadow);
 }
 
 .tech-item div {
@@ -780,7 +950,7 @@ section {
   padding: 24px 12px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: var(--card-radius);
   text-align: center;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -791,7 +961,7 @@ section {
   background: var(--bg-card-hover);
   border-color: var(--border-hover);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card-hover-simple);
 }
 
 .avatar {
@@ -806,7 +976,7 @@ section {
   font-size: 0.85rem;
   font-weight: 700;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  box-shadow: var(--avatar-shadow);
   overflow: hidden; /* Ensures image doesn't overflow the rounded borders */
   transform: translateZ(0); /* Fixes Safari overflow-hidden border-radius bug */
   -webkit-transform: translateZ(0);
@@ -834,14 +1004,14 @@ section {
 
 .download-box {
   padding: 60px 40px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 32px;
+  background: var(--download-box-bg);
+  border: var(--download-box-border);
+  border-radius: var(--download-box-radius);
   max-width: 720px;
   margin: 0 auto;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--download-box-shadow);
   text-align: center;
 }
 
@@ -862,24 +1032,24 @@ section {
   gap: 16px;
   padding: 16px 28px;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
-  border-radius: 20px;
+  border-radius: var(--download-card-radius);
   transition: var(--transition);
   cursor: pointer;
   color: #fff;
-  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
+  box-shadow: var(--download-card-shadow);
   width: 100%;
   justify-content: center;
 }
 
 .download-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.2);
+  box-shadow: var(--download-card-hover-shadow);
 }
 
 .download-card.maintenance {
-  background: rgba(15, 23, 42, 0.05) !important;
-  border: 1px solid rgba(15, 23, 42, 0.08) !important;
-  color: var(--text-muted) !important;
+  background: var(--download-card-m-bg) !important;
+  border: 1px solid var(--download-card-m-border) !important;
+  color: var(--download-card-m-color) !important;
   cursor: not-allowed !important;
   box-shadow: none !important;
 }
@@ -932,7 +1102,7 @@ section {
 
 #footer {
   padding: 0 24px;
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  border-top: 1px solid var(--border-line);
 }
 
 .footer-container {
@@ -999,7 +1169,7 @@ section {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  border-top: 1px solid var(--border-line);
   font-size: 0.8rem;
   color: var(--text-muted);
 }
@@ -1068,14 +1238,14 @@ section {
   flex-direction: column;
   gap: 24px;
   transition: var(--transition);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--guide-card-shadow);
 }
 
 .guide-card:hover {
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--guide-card-hover-shadow);
 }
 
 .guide-card-header {
@@ -1088,8 +1258,8 @@ section {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(59, 130, 246, 0.06);
-  border: 1px solid rgba(59, 130, 246, 0.15);
+  background: var(--guide-card-icon-bg);
+  border: 1px solid var(--guide-card-icon-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1098,9 +1268,9 @@ section {
 }
 
 .guide-card:hover .guide-card-icon {
-  background: rgba(59, 130, 246, 0.12);
+  background: var(--guide-card-icon-hover-bg);
   border-color: var(--cyan);
-  box-shadow: none;
+  box-shadow: var(--guide-card-icon-hover-shadow);
 }
 
 .guide-card-icon svg {
@@ -1126,14 +1296,14 @@ section {
   font-family: var(--font-heading);
   font-size: 1.8rem;
   font-weight: 800;
-  color: rgba(15, 23, 42, 0.04);
+  color: var(--guide-card-number-color);
   line-height: 1;
   transition: var(--transition);
 }
 
 .guide-card:hover .guide-card-number {
   color: var(--cyan);
-  text-shadow: none;
+  text-shadow: var(--guide-card-number-hover-shadow);
 }
 
 .guide-card-body h3 {
@@ -1186,8 +1356,8 @@ section {
 .guide-badge {
   display: inline-block;
   padding: 4px 12px;
-  background: rgba(15, 23, 42, 0.03);
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: var(--guide-badge-bg);
+  border: 1px solid var(--guide-badge-border);
   border-radius: 30px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -1295,6 +1465,12 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 
+  .light-theme .nav-links {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  }
+
   .nav-links.active {
     display: flex;
   }
@@ -1388,4 +1564,63 @@ section {
   .guide-card-details li {
     font-size: 0.8rem;
   }
+}
+
+/* ==========================================================================
+   14. THEME TOGGLE BUTTON STYLING
+   ========================================================================== */
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray);
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border-radius: 50%;
+  margin-right: 8px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.theme-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.light-theme .theme-toggle-btn:hover {
+  color: var(--text-white);
+  background: rgba(15, 23, 42, 0.05);
+}
+
+/* Control sun/moon display based on active theme */
+.light-theme .sun-icon {
+  display: none !important;
+}
+
+.light-theme .moon-icon {
+  display: inline-block !important;
+}
+
+.sun-icon {
+  display: inline-block;
+}
+
+.moon-icon {
+  display: none;
 }
