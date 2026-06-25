@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css?v=1.0.2">
+    <link rel="stylesheet" href="style.css?v=1.0.3">
     <script>
         // Immediate theme check to prevent flash of dark theme
         if (localStorage.getItem('theme') === 'light') {
@@ -41,25 +41,32 @@
                 <span>BlueMesh</span>
             </a>
 
-            <!-- Right-side Navigation Elements -->
-            <div class="nav-right">
-                <!-- Navigation Links -->
-                <div class="nav-links" id="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#app-guide">App Guide</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#about">About</a>
-                    <a href="#team">Team</a>
-                    <a href="#download" class="nav-cta">Download</a>
-                </div>
-
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <!-- Navigation Links -->
+            <div class="nav-links" id="nav-links">
+                <a href="#features">Features</a>
+                <a href="#app-guide">App Guide</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#team">Team</a>
+                
+                <!-- Desktop Theme Toggle Button -->
+                <button class="theme-toggle-btn desktop-toggle" aria-label="Toggle Theme">
                     <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
                 </button>
 
-                <!-- Mobile Hamburger Button (hidden on desktop) -->
+                <a href="#download" class="nav-cta">Download</a>
+            </div>
+
+            <!-- Mobile Actions -->
+            <div class="nav-mobile-actions">
+                <!-- Mobile Theme Toggle Button -->
+                <button class="theme-toggle-btn mobile-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                </button>
+
+                <!-- Mobile Hamburger Button -->
                 <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                     <span></span><span></span><span></span>
                 </button>
