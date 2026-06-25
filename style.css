@@ -98,91 +98,91 @@
 
 /* --- Light Theme Variables --- */
 .light-theme {
-  --bg-dark: #eef3f6;
+  --bg-dark: #ebf2f8;
   --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
-  --border: rgba(148, 163, 184, 0.12);
-  --border-hover: rgba(148, 163, 184, 0.25);
-  --text-white: #0f172a;
+  --border: rgba(154, 185, 214, 0.25);
+  --border-hover: rgba(154, 185, 214, 0.5);
+  --text-white: #1e293b;
   --text-gray: #475569;
   --text-muted: #64748b;
-  --blue: #0f172a;
-  --cyan: #3b82f6;
-  --indigo: #4f46e5;
-  --shadow-soft: 0 10px 30px -5px rgba(164, 180, 203, 0.25);
-  --shadow-hover: 0 20px 40px -10px rgba(164, 180, 203, 0.38);
+  --blue: #3d6a97;
+  --cyan: #5283b2;
+  --indigo: #6792bf;
+  --shadow-soft: 0 10px 30px -5px rgba(154, 185, 214, 0.22);
+  --shadow-hover: 0 20px 40px -10px rgba(154, 185, 214, 0.35);
   
-  --glow-1-bg: radial-gradient(circle, rgba(59, 130, 246, 0.04) 0%, transparent 70%);
-  --glow-2-bg: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
-  --glow-3-bg: radial-gradient(circle, rgba(99, 102, 241, 0.02) 0%, transparent 70%);
+  --glow-1-bg: radial-gradient(circle, rgba(154, 185, 214, 0.12) 0%, transparent 70%);
+  --glow-2-bg: radial-gradient(circle, rgba(181, 205, 227, 0.1) 0%, transparent 70%);
+  --glow-3-bg: radial-gradient(circle, rgba(201, 220, 236, 0.08) 0%, transparent 70%);
   --navbar-bg: rgba(255, 255, 255, 0.7);
-  --navbar-border: rgba(164, 180, 203, 0.15);
+  --navbar-border: rgba(154, 185, 214, 0.2);
   --navbar-scrolled-bg: rgba(255, 255, 255, 0.85);
-  --navbar-scrolled-border: rgba(164, 180, 203, 0.2);
+  --navbar-scrolled-border: rgba(154, 185, 214, 0.3);
   --navbar-scrolled-shadow: var(--shadow-soft);
-  --nav-cta-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
-  --nav-cta-hover-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+  --nav-cta-shadow: 0 4px 15px rgba(61, 106, 151, 0.15);
+  --nav-cta-hover-shadow: 0 6px 20px rgba(61, 106, 151, 0.28);
   
-  --btn-primary-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
-  --btn-primary-hover-shadow: 0 8px 25px rgba(15, 23, 42, 0.12);
-  --btn-outline-bg: rgba(15, 23, 42, 0.02);
-  --btn-outline-hover-bg: rgba(15, 23, 42, 0.05);
+  --btn-primary-shadow: 0 4px 15px rgba(61, 106, 151, 0.15);
+  --btn-primary-hover-shadow: 0 8px 25px rgba(61, 106, 151, 0.28);
+  --btn-outline-bg: rgba(154, 185, 214, 0.06);
+  --btn-outline-hover-bg: rgba(154, 185, 214, 0.12);
   --btn-radius: 20px;
   
-  --section-tag-bg: rgba(15, 23, 42, 0.03);
-  --section-tag-border: rgba(15, 23, 42, 0.08);
+  --section-tag-bg: rgba(219, 233, 244, 0.4);
+  --section-tag-border: rgba(154, 185, 214, 0.35);
   
-  --hero-badge-bg: rgba(15, 23, 42, 0.03);
-  --hero-badge-border: rgba(15, 23, 42, 0.06);
-  --border-line: rgba(164, 180, 203, 0.15);
+  --hero-badge-bg: rgba(219, 233, 244, 0.4);
+  --hero-badge-border: rgba(154, 185, 214, 0.3);
+  --border-line: rgba(154, 185, 214, 0.2);
   
   --node-bg: #ffffff;
-  --node-shadow: 0 4px 12px rgba(164, 180, 203, 0.15);
-  --hub-border: rgba(15, 23, 42, 0.08);
-  --hub-shadow: 0 6px 16px rgba(164, 180, 203, 0.2);
+  --node-shadow: 0 4px 12px rgba(154, 185, 214, 0.18);
+  --hub-border: rgba(154, 185, 214, 0.4);
+  --hub-shadow: 0 6px 16px rgba(154, 185, 214, 0.22);
   
   --card-radius: 24px;
   --shadow-card-hover: var(--shadow-hover);
   --shadow-card-hover-simple: var(--shadow-soft);
-  --feature-icon-bg: rgba(164, 180, 203, 0.1);
-  --feature-icon-border: rgba(164, 180, 203, 0.2);
+  --feature-icon-bg: rgba(219, 233, 244, 0.45);
+  --feature-icon-border: rgba(181, 205, 227, 0.5);
   --feature-icon-radius: 14px;
   
-  --highlights-bg: rgba(164, 180, 203, 0.05);
-  --highlights-border: rgba(164, 180, 203, 0.1);
+  --highlights-bg: rgba(219, 233, 244, 0.25);
+  --highlights-border: rgba(181, 205, 227, 0.4);
   --highlights-shadow: none;
   
   --tech-card-shadow: var(--shadow-soft);
-  --tech-item-bg: rgba(164, 180, 203, 0.03);
-  --tech-item-border: rgba(164, 180, 203, 0.08);
+  --tech-item-bg: rgba(219, 233, 244, 0.2);
+  --tech-item-border: rgba(219, 233, 244, 0.45);
   --tech-item-radius: 14px;
-  --tech-item-hover-bg: rgba(164, 180, 203, 0.08);
+  --tech-item-hover-bg: rgba(201, 220, 236, 0.35);
   --tech-dot-shadow: none;
   
-  --avatar-shadow: 0 2px 8px rgba(164, 180, 203, 0.15);
+  --avatar-shadow: 0 2px 8px rgba(154, 185, 214, 0.22);
   
   --download-box-bg: #ffffff;
-  --download-box-border: 1px solid rgba(164, 180, 203, 0.15);
+  --download-box-border: 1px solid rgba(154, 185, 214, 0.25);
   --download-box-radius: 32px;
   --download-box-shadow: var(--shadow-soft);
   
   --download-card-radius: 20px;
-  --download-card-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-  --download-card-hover-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
-  --download-card-m-bg: rgba(164, 180, 203, 0.15);
-  --download-card-m-border: rgba(164, 180, 203, 0.25);
+  --download-card-shadow: 0 8px 20px rgba(61, 106, 151, 0.15);
+  --download-card-hover-shadow: 0 12px 28px rgba(61, 106, 151, 0.28);
+  --download-card-m-bg: rgba(219, 233, 244, 0.4);
+  --download-card-m-border: rgba(181, 205, 227, 0.5);
   --download-card-m-color: var(--text-muted);
   
   --guide-card-shadow: var(--shadow-soft);
   --guide-card-hover-shadow: var(--shadow-hover);
-  --guide-card-icon-bg: rgba(164, 180, 203, 0.15);
-  --guide-card-icon-border: rgba(164, 180, 203, 0.25);
-  --guide-card-icon-hover-bg: rgba(164, 180, 203, 0.25);
+  --guide-card-icon-bg: rgba(219, 233, 244, 0.4);
+  --guide-card-icon-border: rgba(181, 205, 227, 0.5);
+  --guide-card-icon-hover-bg: rgba(154, 185, 214, 0.35);
   --guide-card-icon-hover-shadow: none;
-  --guide-card-number-color: rgba(15, 23, 42, 0.04);
+  --guide-card-number-color: rgba(154, 185, 214, 0.15);
   --guide-card-number-hover-shadow: none;
-  --guide-badge-bg: rgba(164, 180, 203, 0.08);
-  --guide-badge-border: rgba(164, 180, 203, 0.15);
+  --guide-badge-bg: rgba(219, 233, 244, 0.35);
+  --guide-badge-border: rgba(181, 205, 227, 0.45);
 }
 
 * {
@@ -211,7 +211,7 @@ body::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: radial-gradient(circle at 50% 0%, #f7fafc 0%, #eef3f6 70%);
+  background-image: radial-gradient(circle at 50% 0%, #f7fafc 0%, #ebf2f8 70%);
   opacity: 0;
   z-index: -2;
   transition: opacity 0.8s ease;
